@@ -14,7 +14,7 @@ future: true
 # SNS settings
 # zhihu_username:     kang-kang-74-24-60
 github_username:    MrZilinXiao
-# googlescholar_username:   6p0ygKUAAAAJ&hl
+googlescholar_username:   IHDbVRoAAAAJ
 linkedin_username:  zilin-xiao
 
 
@@ -75,9 +75,9 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "me@mrxiao.net"
+sidebar-about-description: "Personal: <a target=\"_blank\" href=\"mailto:me@mrxiao.net\" rel=\"nofollow\"><font color=\"DodgerBlue\">me@mrxiao.net</font></a> <br> Work: <a target=\"_blank\" href=\"mailto:v-zilinxiao@microsoft.com\" rel=\"nofollow\"><font color=\"DodgerBlue\">v-zilinxiao@microsoft.com</font></a> <br> Ivy: <a target=\"_blank\" href=\"mailto:zilin@lets-unify.ai\" rel=\"nofollow\"><font color=\"DodgerBlue\">zilin@lets-unify.ai</font></a>"
 sidebar-avatar: /img/me.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
+sidebar-avatar-2: /img/me-life.jpeg
 
 
 # Featured Tags
@@ -98,24 +98,12 @@ page-mathjax: false
 
 
 # Friends
-# friends: [
-#     # {
-#     #     title: "Su",
-#     #     href: "http://su.gallery/"
-#     # },{
-#     #     title: "Yanwei Li",
-#     #     href: "https://yanwei-li.com/"
-#     # },{
-#     #     title: "Ruihang Chu",
-#     #     href: "ruihangchu@link.cuhk.edu.hk"
-#     # },{
-#     #   title: "Lu Qi",
-#     #   href: "http://luqi.info/"
-#     # },{
-#     #   title: "Dechao Meng",
-#     #   href: "https://silverbulletmdc.github.io/"
-#     # },{
-#     #   title: "Peizhen Zhang",
-#     #   href: "https://github.com/zhangpzh"
-#     # }
-# ]
+friends: [
+    {
+        title: "Peiran Wang",
+        href: "https://whilebug.github.io/"
+    },{
+        title: "Yaxuan Wang",
+        href: "https://supergirl-os.github.io/"
+    }
+]
