@@ -3,7 +3,7 @@ title: My Homepage
 SEOTitle: Zilin Xiao | 肖子霖 Profile
 header-img: img/post-bg-universe.jpg
 email: me@mrxiao.net
-description: "Maybe An AI Researcher."
+description: "Maybe an AI Researcher."
 keyword: ""
 url: "https://zilin.me"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
@@ -75,7 +75,7 @@ netease_comment: false
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
-sidebar-about-description: "Personal: <a target=\"_blank\" href=\"mailto:me@mrxiao.net\" rel=\"nofollow\"><font color=\"DodgerBlue\">me@mrxiao.net</font></a> <br> Work: <a target=\"_blank\" href=\"mailto:v-zilinxiao@microsoft.com\" rel=\"nofollow\"><font color=\"DodgerBlue\">v-zilinxiao@microsoft.com</font></a> <br> Ivy: <a target=\"_blank\" href=\"mailto:zilin@lets-unify.ai\" rel=\"nofollow\"><font color=\"DodgerBlue\">zilin@lets-unify.ai</font></a>"
+sidebar-about-description: "Personal: <a target=\"_blank\" href=\"mailto:me@mrxiao.net\" rel=\"nofollow\"><font color=\"DodgerBlue\">me@mrxiao.net</font></a> <br>"
 sidebar-avatar: /img/me.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
 sidebar-avatar-2: /img/me-life.jpeg
 
