@@ -76,8 +76,8 @@ netease_comment: false
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Personal: <a target=\"_blank\" href=\"mailto:me@mrxiao.net\" rel=\"nofollow\"><font color=\"DodgerBlue\">me@mrxiao.net</font></a> <br> Academic: <a target=\"_blank\" href=\"mailto:zilin@rice.edu\" rel=\"nofollow\"><font color=\"DodgerBlue\">zilin@rice.edu</font></a>"
-sidebar-avatar: /img/me.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
-sidebar-avatar-2: /img/me-life.jpeg
+sidebar-avatar: /img/me-life.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar-2: /img/me.jpeg
 
 
 # Featured Tags
