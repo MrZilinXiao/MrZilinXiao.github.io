@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grounding Language Models for Visual Entity Recognition</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/StructChem.jpg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title is-bold">
+              <img src="autover_logo.jpeg" style="width:1em;vertical-align: middle" alt="Logo" />
+              <span class="mmmu" style="vertical-align: middle">AutoVER</span>
+            </h1>
+            <h2 class="subtitle is-3 publication-subtitle">
+              Grounding Language Models for Visual Entity Recognition
+            </h2>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://zilin.me">Zilin Xiao</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://www.microsoft.com/en-us/research/people/migon">Ming Gong</a><sup>2</sup>,</span>
+              <span class="author-block">
+                <a href="https://paolacascante.com">Paola Cascante-Bonilla</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Xingyao Zhang<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Jie Wu<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.cs.rice.edu/~vo9/">Vicente Ordonez</a><sup>1</sup>
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Rice University, <sup>2</sup>Microsoft</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2402.18695" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://github.com/MrZilinXiao/AutoVER"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            We introduce AutoVER, an Autoregressive model for Visual Entity Recognition. Our model extends an
+            autoregressive
+            Multi-modal Large Language Model by employing retrieval augmented constrained generation. It mitigates low
+            performance
+            on out-of-domain entities while excelling in queries that require visual reasoning. Our method learns to
+            distinguish
+            similar entities within a vast label space by contrastively training on hard negative pairs in parallel with
+            a
+            sequence-to-sequence objective without an external retriever. During inference, a list of retrieved
+            candidate answers
+            explicitly guides language generation by removing invalid decoding paths. The proposed method achieves
+            significant
+            improvements across different dataset splits in the recently proposed Oven-Wiki benchmark with accuracy on
+            the Entity
+            seen split rising from 32.7% to 61.5%. It demonstrates superior performance on the unseen and query splits
+            by a
+            substantial double-digit margin, while also preserving the ability to effectively transfer to other generic
+            visual
+            question answering benchmarks without further training.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-3">Task Overview</h2>
+          <p align="center">
+            <img src="overview.png" class="center" width="80%">
+          </p>
+          Visual Entity Recognition can be viewed as a multimodal knowledge grounding task, in which the model is
+          required
+          to
+          process an image-text pair and predict an entity in Wikipedia. To circumvent trivial solutions for some query
+          questions,
+          all
+          image-text pairs are annotated so the question cannot be
+          correctly answered without the image.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-3">Method</h2>
+          <p align="center">
+            <img src="model_training.png" class="center" width="80%">
+          </p>
+          <div class="content has-text-justified">
+            <ul>
+              <li>During training, we jointly optimize the contrastive training objective and langauge modeling
+                objective,
+                thereby augmenting the underlying multi-modal language model with fine-grained visual recognition
+                capabilities.
+              </li>
+              <li>At inference time, we dynamically built a prefix tree with top-score retrieved entity names.
+                Prefix tree will guide the decoding process to generate within the set of retrieved items.
+                Improbable decoding paths are removed from the decoding process.
+              </li>
+            </ul>
+          </div>
+          <p align="center">
+            <img src="model_inference.png" class="center" width="80%">
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-3">Experiments</h2>
+          <p align="center">
+            <img src="main_results.png" class="center" width="50%">
+          </p>
+          <div class="content has-text-justified">
+            <ul>
+              <li>AutoVER demonstrates a consistent improvement in all data splits and subsets, with its inherent
+                reasoning and visual
+                localization capabilities within the MLLM.
+              </li>
+              <li>AutoVER only falls short of zero-shot GPT-4V on Query Unseen Split.
+              </li>
+            </ul>
+          </div>
+          <p align="center">
+            <img src="examples.png" class="center" width="80%">
+          </p>
+          <div class="content has-text-justified">
+            <ul>
+              <li>AutoVER adeptly captures slight variations in the query text and retrieves entirely different entity
+                candidates, which
+                forms the basis for the generative decisions from the language model.
+              </li>
+              <li>AutoVER demonstrates a consistent improvement in most data splits and subsets, compared with previous
+                discriminative,
+                generative or zero-shot methods.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>@inproceedings{xiao2024grounding,
+      Author = {Zilin Xiao and Ming Gong and Paola Cascante-Bonilla and Xingyao Zhang and Jie Wu and Vicente Ordonez},
+      Title = {Grounding Language Models for Visual Entity Recognition},
+      Year = {2024},
+      Eprint = {arXiv:2402.18695},
+      }</code></pre>
+    </div>
+  </section>
+
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-6">
+          <div class="content">
+            <p>
+              The source code of this webpage is based on the <a href="https://github.com/nerfies/nerfies.github.io/">
+                Nerfies</a> project webpage.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
