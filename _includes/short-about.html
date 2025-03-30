@@ -2,7 +2,8 @@
   <h5>ABOUT ME</h5>
   <div class="short-about">
     {% if site.sidebar-avatar %}
-    <img src="{{site.sidebar-avatar}}" onclick="this.src = ((this.src.indexOf('me.jpeg') > -1) ? '/img/me-life.jpeg' : '{{site.sidebar-avatar}}');" />
+    <img src="{{site.sidebar-avatar}}" onclick="this.src = ((this.src.indexOf('me_new.jpg') > -1) ? '{{site.sidebar-avatar-2}}' : '{{site.sidebar-avatar}}');" />
+    Photo by <a href="https://www.cs.rice.edu/~vo9/" target="_blank" rel="nofollow">@bluevicente</a>
     {% endif %}
     {% if site.sidebar-about-description %}
     <i><p>{{site.sidebar-about-description}}</p></i>
